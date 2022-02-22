@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Studio (Version 2.1)</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- My styles CSS -->
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <!-- Header section at the top -->
+    <header class="header-section">
+
+        <!-- Navigation -->
+        <nav class="nav">
+
+            <a href="./index.html" class="logo">
+                <span class="accent">Web</span>Studio
+            </a>
+
+            <!-- Main links Navigation -->
+            <ul class="nav-list">
+                <li><a href="#" class="nav-links current">Студия</a></li>
+                <li><a href="./portfolio.html" class="nav-links">Портфолио</a></li>
+                <li><a href="#" class="nav-links">Контакты</a></li>
+            </ul>
+        </nav>
+            <!-- Сontact details -->
+            <ul class="contacts-list">
+                <li>
+                    <a href="mailto:info@devstudio.com" class="contacts-links">info@devstudio.com</a></li>
+                <li>
+                    <a href="tel:+380961111111" class="contacts-links">+38 096 111 11 11</a>
+                </li>
+            </ul>
+
+    </header>
+
+    <!-- Main content section -->
+    <main>
+
+        <!-- Section after Header vs nav menu -->
+        <section class="hero-section">
+
+            <h1 class="hero-section-title">Эффективные решения для вашего бизнеса</h1>
+            <button type="button" class="btn">Заказать услугу</button>
+
+        </section>
+
+        <!--  Excellence section-->
+        <section class="excellence">
+
+            <!-- Semantic header (As shown in the video by Alexander Repeta).
+                H2 tag not showing in html page flow. Is hidden with display: none; -->
+            <h2 style="display: none;" >Приемущества студии</h2>
+
+            <!-- List of excellence -->
+            <ul class="excellence-list">
+                <li>
+                    <h3 class="excellence-title">Внимание к деталям</h3>
+                    <p>Идейные соображения, а также начало повседневной работы по формированию позиции.</p>
+                </li>
+                <li>
+                    <h3 class="excellence-title">Пунктуальность</h3>
+                    <p>Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>
+                </li>
+                <li>
+                    <h3 class="excellence-title">Планирование</h3>
+                    <p>Равным образом консультация с широким активом в значительной степени обуславливает.</p>
+                </li>
+                <li>
+                    <h3 class="excellence-title">Современные технологии</h3>
+                    <p>Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
+                </li>
+            </ul>
+
+        </section>
+
+        <!-- What are we doing section-->
+        <section class="">
+            <h2 class="title">Чем мы занимаемся</h2>
+            <ul>
+                <li><img src="./images/box1.jpg" alt="планирование проекта" width="370"></li>
+                <li><img src="./images/box2.jpg" alt="разрабатка интерфейса изначально для мобильной версии" width="370"></li>
+                <li><img src="./images/box3.jpg" alt="внимание к цветам и оттенкам" width="370"></li>
+            </ul>         
+            
+        </section>
+
+        <!-- Our team section-->
+        <section class="team-section">
+            <h2 class="title">Наша команда</h2>
+
+            <!-- Team list -->
+            <ul class="team-list">
+                <li> 
+                    <img 
+                    src="./images/IgorDemyanenko.jpg" 
+                    alt="Фото продуктового дизайнера Игоря Демьяненко" 
+                    width="270">
+                    <h3 class="name-title">Игорь Демьяненко</h3>
+                    <p class="team-text">Product Designer</p>    
+                </li>
+                <li> 
+                    <img 
+                    src="./images/OlgaRepina.jpg" 
+                    alt="Фото фронтенд разработчика Ольги Репиной"
+                    width="270">
+                    <h3 class="name-title">Ольга Репина</h3>
+                    <p class="team-text">Frontend Developer</p>    
+                </li>
+                <li> 
+                    <img 
+                    src="./images/NikolaiTarasov.jpg" 
+                    alt="Фото маркетолога Николая Тарасова"
+                    width="270">
+                    <h3 class="name-title">Николай Тарасов</h3>
+                    <p class="team-text">Marketing</p>    
+                </li>
+                <li> 
+                    <img 
+                    src="./images/MikhailErmak.jpg" 
+                    alt="Фото дизайнера пользовательских интерфейсов Михаила Ермакова"
+                    width="270">
+                    <h3 class="name-title">Михаил Ермаков</h3>
+                    <p class="team-text">UI Designer</p>    
+                </li>
+            </ul>
+
+        </section>
+
+    </main>
+
+    <!-- Footer section -->
+    <footer class="footer-section">
+
+        <!-- Logo -->
+        <a href="./index.html" class="logo footer">
+            <span class="accent">Web</span>Studio
+        </a>
+
+        <!-- The address -->
+        <address class="address">
+            г. Киев, пр-т Леси Украинки, 26
+        </address>
+
+        <!-- Сontact details -->
+        <ul class="contacts-list">
+            <li>
+                <a href="mailto:info@devstudio.com" class="contacts-links footer">info@devstudio.com</a>
+            </li>
+            <li>
+                <a href="tel:+380961111111" class="contacts-links footer">+38 096 111 11 11</a>
+            </li>
+        </ul>
+    </footer>
+    
+</body>
+</html>
