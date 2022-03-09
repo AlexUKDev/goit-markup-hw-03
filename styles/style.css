@@ -42,6 +42,19 @@ p {
   padding: 0;
 }
 
+/* Сontent centering styles */
+.container {
+  /* outline: 1px solid tomato; */
+  width: 1200px;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 94px;
+}
+
 /* HEader styles */
 .container.header {
   margin-bottom: 0;
@@ -64,6 +77,8 @@ p {
 /* Main links Navigation */
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav {
@@ -73,12 +88,16 @@ ul {
 
 .nav-list,
 .contacts-list {
+  display: flex;
+  padding: 0;
+  margin-top: 24px;
+  margin-right: 331px;
+  margin-bottom: 24px;
+  margin-left: 0;
+
   letter-spacing: 0.02em;
   font-weight: 500;
 
-  padding: 0;
-  margin: 24px 331px 24px 0;
-  display: flex;
   /* justify-content: space-between; */
   text-align: center;
 }
@@ -97,8 +116,11 @@ ul {
   color: var(--primary-text-color);
   text-decoration: none;
 }
+.nav-list .items:not(:last-child) {
+  margin-right: 50px;
+}
 
-.items:not(:last-child) {
+.contacts-list .items:not(:last-child) {
   margin-right: 50px;
 }
 
@@ -118,16 +140,6 @@ ul {
   color: var(--accent-color);
 }
 
-/* Сontent centering styles */
-.container {
-  outline: 1px solid tomato;
-  width: 1230px;
-  padding: 0 15px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 94px;
-}
-
 /* Hero-section styles*/
 .hero-section {
   height: fit-content;
@@ -137,7 +149,6 @@ ul {
 }
 
 .hero {
-  width: 1230px;
   height: 600px;
   padding-top: 200px;
 }
@@ -182,11 +193,28 @@ ul {
 }
 
 /* Reset standard styles*/
-.excellence-list,
+.pros-list,
 .team-list {
+  display: flex;
+
   margin: 0;
   padding: 0;
   list-style: none;
+}
+/* Pros section syles  */
+.pros-list .items {
+  min-width: 270px;
+}
+.pros-title {
+  color: var(--title-text-color);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.142;
+  padding-bottom: 10px;
+}
+.pros-list .items:not(:last-child) {
+  margin-right: 30px;
 }
 
 .title {
@@ -199,20 +227,44 @@ ul {
   padding-bottom: 50px;
 }
 
-/* Excellence section syles  */
-.excellence-title {
-  color: var(--title-text-color);
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 14px;
-  line-height: 1.142;
+/* What are we doing (skils-section) */
+.skills {
+  display: flex;
+}
+.skills .items:not(:last-child) {
+  margin-right: 30px;
 }
 
+/* .pros-list .items + .items {
+  margin-left: 30px;
+} */
+
 /* Team section styles */
+.team {
+  margin-bottom: 0;
+}
 .team-section {
   padding-top: 94px;
+  padding-bottom: 94px;
+
+  background-color: var(--btn-bg-color);
+}
+
+.team-list .items:not(:last-child) {
+  margin-right: 30px;
+}
+.team-list .items {
+  background: var(--primary-white-color);
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 .name-title {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 16px;
@@ -220,6 +272,9 @@ ul {
 }
 
 .team-text {
+  margin-bottom: 30px;
+
+  text-align: center;
   font-weight: 400;
   font-size: 16px;
 }
@@ -231,9 +286,23 @@ ul {
   background-color: var(--gray-bg-color);
 }
 
-/* modifier class for foter logo color */
+/* Modifier class for foter logo color */
 .footer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+
   color: var(--primary-white-color);
+}
+.logo.footer {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.contacts-list.boottom {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 9px;
+  margin-bottom: 60px;
 }
 
 .address {
@@ -249,10 +318,10 @@ ul {
 }
 
 /* Portfolio.html styles */
-.portfolio-section {
-  width: 1170px;
+.menu {
+  margin-top: 94px;
+  margin-bottom: 34px;
 }
-
 .portfolio-menu {
   color: var(--title-text-color);
   font-size: 16px;
@@ -269,6 +338,12 @@ ul {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+.portfolio-content .portfolio-content-items {
+  margin-bottom: 30px;
+  background: var(--primary-white-color);
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
 }
 .portfolio-content-items {
   /* width: 370px; */
@@ -302,6 +377,9 @@ ul {
 }
 
 .portfolio-title {
+  margin-left: 24px;
+  margin-bottom: 4px;
+
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 18px;
@@ -309,6 +387,9 @@ ul {
   letter-spacing: 0.06em;
 }
 .portfolio-text {
+  margin-left: 24px;
+  margin-bottom: 24px;
+
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.87;
