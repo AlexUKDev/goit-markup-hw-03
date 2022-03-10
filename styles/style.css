@@ -8,6 +8,7 @@
   --primary-white-color: #ffffff;
   --gray-bg-color: #2f303a;
   --btn-bg-color: #f5f4fa;
+  --border-bottom-color: #ececec;
   --border-color: #eeeeee;
 }
 
@@ -45,35 +46,34 @@ p {
 
 /* Сontent centering styles */
 .container {
-  /* outline: 1px solid tomato; */
   width: 1200px;
-  padding-top: 0;
-  padding-bottom: 0;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 94px;
 
   /* outline: 1px solid tomato; */
-  /* background-color: var(--primary-white-color); */
 }
 
 /* HEader styles */
+.header-section {
+  border-bottom: 1px solid var(--border-bottom-color);
+}
 .header {
-  min-height: 80px;
-  margin-bottom: 0;
   display: flex;
   align-items: center;
 }
 /* Logo syles */
 .logo {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--logo-black);
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
   text-decoration: none;
-  /* margin: 24px 93px 25px 0; */
 }
 .accent {
   color: var(--accent-color);
@@ -104,11 +104,6 @@ ul {
 .contacts-list {
   margin-left: auto;
 }
-.nav-list {
-  /* min-width: 294px;
-  min-height: 16px;
-  align-items: center; */
-}
 
 .nav-links,
 .contacts-links {
@@ -125,6 +120,10 @@ ul {
 
 .nav-links {
   color: var(--title-text-color);
+
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .current {
   color: var(--accent-color);
@@ -144,23 +143,25 @@ ul {
 .hero-section {
   height: fit-content;
   text-align: center;
+
+  padding-top: 200px;
+  padding-bottom: 200px;
   /* BG для видимости белого цвета */
   background-color: var(--gray-bg-color);
 }
 
 .hero {
-  height: 600px;
-  padding-top: 200px;
+  width: 696px;
 }
 
 .hero-section-title {
-  color: var(--primary-white-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  color: var(--primary-white-color);
 
   margin: 0;
 }
@@ -193,6 +194,14 @@ ul {
 }
 
 /* Reset standard styles*/
+.pros-section {
+  margin-top: 94px;
+  margin-bottom: 94px;
+}
+
+.pros-header {
+  visibility: hidden;
+}
 .pros-list,
 .team-list {
   display: flex;
@@ -203,7 +212,7 @@ ul {
 }
 /* Pros section syles  */
 .pros-list .items {
-  min-width: 270px;
+  width: 270px;
 }
 .pros-title {
   color: var(--title-text-color);
@@ -211,9 +220,22 @@ ul {
   text-transform: uppercase;
   font-size: 14px;
   line-height: 1.142;
-  padding-bottom: 10px;
+
+  margin-bottom: 10px;
 }
 .pros-list .items:not(:last-child) {
+  margin-right: 30px;
+}
+
+/* What are we doing (skils-section) */
+.skills-section {
+  margin-bottom: 94px;
+}
+
+.skills {
+  display: flex;
+}
+.skills .items:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -224,26 +246,20 @@ ul {
   line-height: 1.16;
   text-align: center;
 
-  padding-bottom: 50px;
-}
-
-/* What are we doing (skils-section) */
-.skills {
-  display: flex;
-}
-.skills .items:not(:last-child) {
-  margin-right: 30px;
+  margin-bottom: 50px;
 }
 
 /* Team section styles */
-.team {
-  margin-bottom: 0;
-}
 .team-section {
-  padding-top: 94px;
+  margin-top: 94px;
   padding-bottom: 94px;
 
   background-color: var(--btn-bg-color);
+}
+
+.container.team {
+  padding-top: 94px;
+  margin-bottom: 0;
 }
 
 .team-list .items:not(:last-child) {
@@ -256,8 +272,12 @@ ul {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-.name-title {
+
+.team-wrap {
   margin-top: 30px;
+  margin-bottom: 30px;
+}
+.name-title {
   margin-bottom: 10px;
   text-align: center;
 
@@ -268,7 +288,7 @@ ul {
 }
 
 .team-text {
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 
   text-align: center;
   font-weight: 400;
@@ -277,20 +297,15 @@ ul {
 
 /* Footer section styles */
 .footer-section {
-  height: fit-content;
-  /* BG для видимости белого цвета */
+  padding-top: 60px;
+  padding-bottom: 60px;
+
   background-color: var(--gray-bg-color);
 }
 
-/* Modifier class for foter logo color */
 .container.footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-.footer {
   display: flex;
   flex-direction: column;
-
   margin-bottom: 0;
 
   color: var(--primary-white-color);
@@ -299,6 +314,9 @@ ul {
 .logo.footer {
   display: inline-block;
   margin-bottom: 20px;
+  padding: 0;
+
+  color: var(--primary-white-color);
 }
 .contacts-list.bottom {
   flex-direction: column;
@@ -309,14 +327,12 @@ ul {
 }
 
 .address {
+  font-weight: 400;
+  font-size: 14px;
   font-style: normal;
-  color: var(--primary-white-color);
   line-height: 1.71;
 }
 .contacts-links.footer {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
   opacity: 60%;
 }
 
