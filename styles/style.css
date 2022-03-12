@@ -66,8 +66,6 @@ p {
 /* Logo syles */
 .logo {
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
 
   color: var(--logo-black);
   font-family: "Raleway", sans-serif;
@@ -88,6 +86,7 @@ ul {
 
 .nav {
   display: flex;
+  align-items: center;
   /* justify-content: space-around; */
 }
 
@@ -135,6 +134,7 @@ ul {
 .nav-links:hover,
 .nav-links:focus,
 .contacts-links:hover,
+.contacts-links.footer:hover,
 .contacts-links:focus {
   color: var(--accent-color);
 }
@@ -195,13 +195,24 @@ ul {
 
 /* Reset standard styles*/
 .pros-section {
-  margin-top: 94px;
-  margin-bottom: 94px;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
-.pros-header {
-  visibility: hidden;
+/* Semantic header visually-hidden*/
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
+
 .pros-list,
 .team-list {
   display: flex;
@@ -223,13 +234,16 @@ ul {
 
   margin-bottom: 10px;
 }
+.pros-text {
+  line-height: 1.71;
+}
 .pros-list .items:not(:last-child) {
   margin-right: 30px;
 }
 
 /* What are we doing (skils-section) */
 .skills-section {
-  margin-bottom: 94px;
+  padding-bottom: 94px;
 }
 
 .skills {
@@ -251,14 +265,13 @@ ul {
 
 /* Team section styles */
 .team-section {
-  margin-top: 94px;
+  padding-top: 94px;
   padding-bottom: 94px;
 
   background-color: var(--btn-bg-color);
 }
 
 .container.team {
-  padding-top: 94px;
   margin-bottom: 0;
 }
 
@@ -274,8 +287,8 @@ ul {
 }
 
 .team-wrap {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 .name-title {
   margin-bottom: 10px;
@@ -318,7 +331,7 @@ ul {
 
   color: var(--primary-white-color);
 }
-.contacts-list.bottom {
+.contacts-list.footer {
   flex-direction: column;
   align-items: flex-start;
 
@@ -327,25 +340,39 @@ ul {
 }
 
 .address {
+  width: 231px;
+
   font-weight: 400;
   font-size: 14px;
   font-style: normal;
   line-height: 1.71;
 }
 .contacts-links.footer {
+  color: var(--primary-white-color);
   opacity: 60%;
 }
-
+.contacts-list.footer .items {
+  margin-top: 9px;
+  margin-right: 0;
+}
 /* Portfolio.html styles */
-.menu {
-  margin-top: 94px;
-  margin-bottom: 34px;
+.portfolio-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.container.menu {
 }
 .portfolio-menu {
+  display: block;
+  padding-bottom: 50px;
+
   color: var(--title-text-color);
   font-size: 16px;
   line-height: 1.63;
   justify-content: center;
+}
+.portfolio-menu-items:not(:last-child) {
+  margin-right: 8px;
 }
 
 .portfolio-menu,
@@ -378,6 +405,8 @@ ul {
 }
 
 .filter-btn {
+  padding: 6px 22px;
+
   font-family: "Roboto", sans-serif;
   background-color: var(--btn-bg-color);
   color: var(--title-text-color);
@@ -385,8 +414,6 @@ ul {
   font-size: 16px;
   text-align: center;
   font-weight: 500;
-  padding: 6px 22px;
-  margin-right: 8px;
 
   border: none;
   border-radius: 4px;
