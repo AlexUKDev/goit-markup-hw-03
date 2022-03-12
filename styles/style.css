@@ -402,6 +402,10 @@ ul {
   border-left: 1px solid var(--border-color);
   border-right: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
+
+  padding-top: 20px;
+  padding-left: 24px;
+  padding-bottom: 20px;
 }
 
 .filter-btn {
@@ -435,7 +439,6 @@ ul {
 }
 
 .portfolio-title {
-  margin-left: 24px;
   margin-bottom: 4px;
 
   color: var(--title-text-color);
@@ -445,9 +448,6 @@ ul {
   letter-spacing: 0.06em;
 }
 .portfolio-text {
-  margin-left: 24px;
-  margin-bottom: 24px;
-
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.87;
