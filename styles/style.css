@@ -331,12 +331,6 @@ ul {
 
   color: var(--primary-white-color);
 }
-.contacts-list.footer {
-  flex-direction: column;
-  align-items: flex-start;
-
-  margin-left: 0;
-}
 
 .address {
   width: 231px;
@@ -346,12 +340,19 @@ ul {
   font-style: normal;
   line-height: 1.71;
 }
+.contacts-list.footer {
+  flex-direction: column;
+  align-items: flex-start;
+
+  margin-top: 9px;
+  margin-left: 0;
+}
+
 .contacts-links.footer {
   color: var(--primary-white-color);
   opacity: 60%;
 }
 .contacts-list.footer .items {
-  margin-top: 9px;
   margin-right: 0;
 }
 /* Portfolio.html styles */
@@ -363,7 +364,7 @@ ul {
 }
 .portfolio-menu {
   display: block;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 
   color: var(--title-text-color);
   font-size: 16px;
@@ -402,9 +403,7 @@ ul {
   border-right: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
 
-  padding-top: 20px;
-  padding-left: 24px;
-  padding-bottom: 20px;
+  padding: 20px 24px;
 }
 
 .filter-btn {
